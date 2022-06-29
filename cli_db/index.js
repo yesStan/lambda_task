@@ -32,21 +32,15 @@ let addUser = async () => {
                 message: 'Please enter the name:'
             })
 
-            // console.log(searchName);
+                .then((answer) => {
+                    console.log(answer.searchName);
+                    function userName() {
+                        console.log(store.find((item) => item.name === answer.searchName));
+                    }
+                    userName();
+                })
 
-            // let found = () => store.find((item) => item.name === searchName);
-            // console.log(found);
-
-            .then((answer) => {
-                console.log(answer.searchName);
-                function userName() {
-                    console.log(store.find((item) => item.name === answer.searchName));
-                }
-                userName();
-            })
-            
-            return console.log('bye');
-
+            return console.log('Name found');
             // return addUser()
 
         } else {
@@ -83,44 +77,3 @@ let addUser = async () => {
     addUser();
 };
 addUser();
-
-
-
-
-    // .then(answers.find(item = item.name => item))
-
-
-// let data = await = () => {
-//      inquirer.prompt([
-//          {
-//              name: 'gender',
-//              message: 'What is your gender',
-//              type: 'list',
-//              choices: ["male", "female"],
-//          },
-//          {
-//              name: 'age',
-//              message: 'What is your age?',
-//              validate: (answers) => {
-//                  if (isNaN(answers)) {
-//                      return 'Only numbers is required'
-//                  }
-//                  return true
-//              }
-//          }
-//      ])
-//          .then(answers => {
-//              // store.map((elem) => {
-//              //     return elem.push({
-//              //         gender: answers.gender,
-//              //         age: answers.age,
-//              //     })
-//              // })
-//              store.push({
-//                  gender: answers.gender,
-//                  age: answers.age,
-//              })
-//              console.log('DB contain next users:', store);
-//              addUser()
-//          })
-//  }
