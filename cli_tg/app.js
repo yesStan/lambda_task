@@ -1,28 +1,25 @@
-// const TelegramBot = require('node-telegram-bot-api');
 
-// import command from './commands.js';
-import botCommand from './commands.js';
-import TelegramBot from 'node-telegram-bot-api';
+const TelegramBot = require('node-telegram-bot-api');
+const { program } = require('commander');
 
-const token = '5553083920:AAEf8j_0bnTGgh0M_IDVjQzPzzWFXpFxFfA';
+require('dotenv').config()
 
-// Create a bot that uses 'polling' to fetch new updates
+console.log(process.env);
+
+// const program = new Command();
+
+const token = process.env.API_KEY;
 const bot = new TelegramBot(token, { polling: true });
+const chatId = 724025977;
 
-bot.setMyCommands(botCommand);
+program
+.option('-m, --msgText <text>', 'Send direct message to a bot')
+.option('-p, --picture <path>', 'Send direct picture to a bot')
+.option('-g, --location <location>', 'send location to a bot')
 
-bot.on('message', (msg) => {
-    const chatId = msg.chat.id;
+    .parse();
+  
+const options = program.opts();
 
-    console.log(msg);
-    // send a message to the chat acknowledging receipt of their message
-    bot.sendMessage(chatId, 'Received your message');
-})
-
-// bot.on('start', (welcomeMsg) => {
-//     const chatId = welcomeMsg.chat.id;
-//     bot.sendMessage(chatId, 'hello people')
-// })
-// bot.onText(/\/start/, (msg) => {
-//     bot.sendMessage(msg.chat.id, "Welcome");
-// });
+const msg = options.msgText ? bot.sendMessage(chatId, options.msgText) : 'sorry wrong action'
+const pic = options.picture ? bot.sendPhoto(chatId, options.picture) : 'sorry wrong action'
