@@ -1,0 +1,71 @@
+.section-centered {
+    width: 100%;
+    max-width: 1280px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 16px;
+}
+.section__whoWeAre {
+    background-image: url(./img/Man_With_Pencil-MMB2F3MF.webp);
+	padding-top: 124px;
+	background-repeat: no-repeat;
+	background-size: 435px 685px;
+	background-position: left 92% top 92px;
+	margin-bottom: 100px;
+	
+    .section__whoWeAre .whoWeAre__title {
+		width: 690px;
+		margin: 0 0 20px;
+	}
+	.whoWeAre__title {
+		font-size: 60px;
+		font-weight: 500;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.37;
+		letter-spacing: -0.19px;
+		margin: 0;
+		max-width: 100%;
+	}
+	.whoWeAre__description {
+		width: 660px;
+		white-space: pre-line;
+		margin-bottom: 40px;
+	}
+
+	.whoWeAre-langs {
+		.whoWeAre-langs__wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.whoWeAre-langs__wrapper article {
+			width: 360px;
+			min-width: 300px;
+			white-space: pre-line;
+			padding: 30px 30px 0;
+			background-color: #fff;
+			margin-bottom: 24px;
+			min-height: 504px;
+			border-radius: 16px;
+			box-shadow: 0 15px 66px #0000000a;
+		}
+		.whoWeAre-langs__wrapper article:not(:first-child) {
+			margin-left: 20px;
+		}
+	}
+}
+
+.section__whoWeAre::before {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 723px;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background-image: linear-gradient(55deg, #f3f7fd 0%, #fff8f9 99%);
+	-o-object-fit: contain;
+	object-fit: contain;
+}
