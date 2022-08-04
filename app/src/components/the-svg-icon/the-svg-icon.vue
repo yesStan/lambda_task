@@ -1,35 +1,42 @@
 <template>
-	<div class="the-svg-icon">
-		<component :is="componentName" />
-        <!-- <icon /> -->
-	</div>
+		<div
+				v-if="iconName"
+				class="the-svg-icon"
+		>
+				<component
+						:is="defineComponent"
+						class="the-svg-icon__icon"
+				/>
+		</div>
 </template>
 
 <script lang="ts">
-import { defineAsyncComponent, defineComponent } from 'vue';
-// import icon from './../../assets/img/Fascinating.svg?component' 
-// ./../../assets/img/Fascinating.svg?component
+import {
+		defineComponent,
+		defineAsyncComponent
+} from 'vue';
+
+const IconFriendly = defineAsyncComponent(() => import('./../../components/icons/icon-friendly.vue'))
+const IconFascinating = defineAsyncComponent(() => import('./../../components/icons/icon-fascinating.vue'))
+
+const ICONS_MAP: any = {
+		'fascinating': IconFascinating,
+		'friendly': IconFriendly
+}
 
 export default defineComponent({
-	name: 'TheSvgIcon',
-    // components: {
-    //     icon
-    // },
-	props: {
-		iconName: {
-			type: String,
-            required: true
+		name: 'TheSvgIcon',
+		props: {
+				iconName: {
+						type: String,
+						validator: (val: string) => Object.keys(ICONS_MAP).includes(val),
+						required: true
+				},
 		},
-	},
-	computed: {
-		componentName() {
-			// const component = defineAsyncComponent(
-			// 	() => import(`./../../assets/img/${this.iconName}.svg?component`)
-			// );
-            // const component = import(`./../../assets/img/${this.iconName}.svg?component`);
-			// return this.iconName ? component : '';
-            return defineAsyncComponent(() => import(`./../../components/icons/${this.iconName.toLowerCase()}.vue`));
+		computed: {
+				defineComponent() {
+						return ICONS_MAP[this.iconName] || ''
+				}
 		},
-	},
 });
 </script>
