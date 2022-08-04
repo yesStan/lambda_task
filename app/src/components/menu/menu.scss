@@ -1,16 +1,19 @@
-.menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-    .menu__wrapper {
-        display: flex;
-    }
-    .menu__list {
-        align-items: center;
+.header__inner {
+	.menu {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+        min-height: 85px;
 
-        .menu__item {
-            margin: 0 25px;
-        }
-    }
+		.menu__wrapper {
+			display: flex;
+		}
+		.menu__list {
+			align-items: center;
+
+			.menu__item {
+				margin: 0 25px;
+			}
+		}
+	}
 }

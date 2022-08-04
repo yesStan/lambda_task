@@ -1,9 +1,9 @@
 <template>
-	<section class="section-centered">
+	<section class="whoWeAre">
 		<div class="container">
 			<div class="section__whoWeAre">
 				<div class="whoWeAre__title">
-					<h1>
+					<h1 class="title__content">
 						<TheBlueBorder text="Корегуємо" />, редагуємо й перекладаємо тексти
 					</h1>
 				</div>
@@ -14,12 +14,12 @@
 						сайті. Вставте текст у спеціальну форму й відразу дізнайтеся
 						вартість і термін виконання роботи.
 					</p>
-					<TheButton button-name="Надіслати текст" />
 				</div>
+                <TheButton class="correct__button" button-name="Надіслати текст" />
 				<div class="whoWeAre-langs">
 					<div class="whoWeAre-langs__wrapper">
 						<article class="whoWeAre-langs__ukr content-text">
-							<h4 class="langs-title">УКРАЇНСЬКА</h4>
+							<h4 class="langs__title">УКРАЇНСЬКА</h4>
 							Наші редактори — експерти з української мови, знають усі
 							нововведення правопису й застосовують останні рекомендації
 							авторитетних філологів.
@@ -30,7 +30,7 @@
 							підтримку.
 						</article>
 						<article class="whoWeAre-langs__eng content-text">
-							<h4 class="langs-title">АНГЛІЙСЬКА</h4>
+							<h4 class="langs__title">АНГЛІЙСЬКА</h4>
 							Виправляємо тексти англійською. Такі замовлення виконують як
 							редактори з України, так і носії мови. Усуваємо ортографічні,
 							граматичні, пунктуаційні, стилістичні, лексичні, синтаксичні
@@ -41,7 +41,7 @@
 							працювали у видавництвах та університетах.
 						</article>
 						<article class="whoWeAre-langs__rus content-text">
-							<h4 class="langs-title">РОСІЙСЬКА</h4>
+							<h4 class="langs__title">РОСІЙСЬКА</h4>
 							Перевірити правопис у тексті російською можна й за допомогою
 							програми, але результат буде не дуже: усіх помилок вона не
 							виловить. Контакт чи контракт? Таку помилку може помітити тільки
@@ -62,7 +62,7 @@
 import { defineComponent } from 'vue';
 
 import TheButton from './../the-button';
-import TheBlueBorder from './../the-blue_borders'; //sooqa zachecm _
+import TheBlueBorder from './../the-blue-borders'; //sooqa zachecm _
 
 export default defineComponent({
 	name: 'WhoWeAre',

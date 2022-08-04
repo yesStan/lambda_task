@@ -1,11 +1,11 @@
 <template>
 	<div class="header">
-		<div class="header__inner">
-			<div class="container">
+		<div class="container">
+			<div class="header__inner">
 				<nav class="menu">
 					<div class="logo">
 						<a href="/" target="_blank" rel="noopener noreferrer">
-							<img src="/img/im-logo.svg" alt="logo" />
+							<img src="./../../assets/img/im-logo.svg" alt="logo" />
 						</a>
 					</div>
 					<div class="menu__wrapper">

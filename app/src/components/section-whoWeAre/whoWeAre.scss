@@ -1,36 +1,51 @@
-.section-centered {
-    width: 100%;
-    max-width: 1280px;
-    padding-left: 60px;
-    padding-right: 60px;
-    border-radius: 16px;
+.whoWeAre {
+	// width: 100%;
+	// max-width: 1280px;
+	padding-left: 60px;
+	padding-right: 60px;
+	border-radius: 16px;
 }
 .section__whoWeAre {
-    background-image: url(./img/Man_With_Pencil-MMB2F3MF.webp);
-	padding-top: 124px;
+    padding-top: 124px;
+	background-image: url(./../../assets/img/Man_With_Pencil-MMB2F3MF.webp);
 	background-repeat: no-repeat;
 	background-size: 435px 685px;
 	background-position: left 92% top 92px;
 	margin-bottom: 100px;
-	
-    .section__whoWeAre .whoWeAre__title {
+
+	.section__whoWeAre .whoWeAre__title {
 		width: 690px;
 		margin: 0 0 20px;
 	}
 	.whoWeAre__title {
-		font-size: 60px;
-		font-weight: 500;
-		font-stretch: normal;
-		font-style: normal;
-		line-height: 1.37;
-		letter-spacing: -0.19px;
-		margin: 0;
-		max-width: 100%;
+		width: 690px;
+		margin: 0 0 20px;
+
+		.title__content {
+			font-size: 60px;
+			font-weight: 500;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 1.37;
+			letter-spacing: -0.19px;
+			margin: 0;
+			max-width: 100%;
+		}
 	}
 	.whoWeAre__description {
 		width: 660px;
 		white-space: pre-line;
 		margin-bottom: 40px;
+
+		.description__text {
+			width: 660px;
+			white-space: pre-line;
+			margin-bottom: 40px;
+		}
+	}
+
+	.correct__button {
+		margin-bottom: 100px;
 	}
 
 	.whoWeAre-langs {
@@ -50,6 +65,22 @@
 			border-radius: 16px;
 			box-shadow: 0 15px 66px #0000000a;
 		}
+		.whoWeAre-langs__wrapper article .langs__title {
+			margin: 0 0 26px;
+			position: relative;
+		}
+		.langs__title {
+			font-size: 16px;
+			font-weight: 600;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 1.5;
+			letter-spacing: 2.67px;
+			margin: 0;
+			text-transform: uppercase;
+			max-width: 100%;
+		}
+
 		.whoWeAre-langs__wrapper article:not(:first-child) {
 			margin-left: 20px;
 		}

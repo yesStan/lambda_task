@@ -2,28 +2,36 @@
 	<div>
 		<Menu />
     <WhoWeAre/>
+    <Translate/>
+    <Excellence/>
 	</div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import WhoWeAre from './components/section_whoWeAre'
+import WhoWeAre from './components/section-whoWeAre'
 import Menu from './components/menu';
+import Translate from './components/section-translate';
+import Excellence from './components/section-excellence'
+
+
 export default defineComponent({
 	name: 'App',
 	components: {
 		Menu,
-    WhoWeAre
+    WhoWeAre,
+    Translate,
+    Excellence,
+
 	},
 });
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+
 </script>
 
 <style>
 .container {
-	max-width: 1280px;
+	min-width: 1280px;
 	padding: 0 60px;
 	margin: 0 auto;
 }

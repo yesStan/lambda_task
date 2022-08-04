@@ -1,0 +1,63 @@
+.translate {
+    border-radius: 16px;
+    position: relative;
+    background: url(./../../assets/img/woman_with_brush-RD3BP3L4.png) no-repeat left 23px top 79px/511px 422px;
+    margin-bottom: 150px;
+
+}
+.translate .title__medium {
+	margin-bottom: 30px;
+}
+.translate-inner {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.translate-inner::before {
+	content: '';
+	position: absolute;
+	display: block;
+	background-image: linear-gradient(65deg, #f3f7fd 0%, #fff8f9 100%);
+	width: calc(100% - 120px);
+	height: 100%;
+	z-index: -1;
+	border-radius: 16px;
+
+	.title__medium {
+		font-size: 30px;
+		font-weight: 500;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.47;
+		letter-spacing: normal;
+		margin: 0;
+		max-width: 100%;
+	}
+    
+}
+.translate-inner .content-text {
+	max-width: 600px;
+	white-space: pre-line;
+	margin-bottom: 40px;
+}
+
+.the-button {
+	min-width: 200px;
+	display: inline-block;
+	text-align: center;
+	background-color: #1b2235;
+	color: #fff;
+	text-decoration: none;
+	padding: 18px 20px;
+	font-size: 16px;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: -0.05px;
+	cursor: pointer;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0 11px 19px #00000029;
+}

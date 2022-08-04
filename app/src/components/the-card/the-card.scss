@@ -1,0 +1,27 @@
+.card {
+	width: 360px;
+	min-height: 372px;
+	margin-bottom: 60px;
+	border-radius: 16px;
+	border: solid 1px #eeeeee;
+	padding: 30px 30px 0;
+
+	.icon {
+		margin-bottom: 40px;
+	}
+	.small-title {
+		font-size: 16px;
+		font-weight: 600;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.5;
+		letter-spacing: 2.67px;
+		margin: 0;
+		text-transform: uppercase;
+		max-width: 100%;
+	}
+}
+.card .content-text {
+    margin: 20px 0;
+    width: 300px;
+}
