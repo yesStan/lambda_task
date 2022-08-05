@@ -1,30 +1,30 @@
 <template>
-	<div>
-		<Menu />
-    <WhoWeAre/>
-    <Translate/>
-    <Excellence/>
-	</div>
+    <div>
+        <AMenu />
+        <WhoWeAre />
+        <Translate />
+        <Excellence />
+    </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import WhoWeAre from './components/section-whoWeAre'
-import Menu from './components/menu';
+import WhoWeAre from './components/section-whoWeAre';
+import AMenu from './components/a-menu';
 import Translate from './components/section-translate';
-import Excellence from './components/section-excellence'
+import Excellence from './components/section-excellence';
 
 
 export default defineComponent({
-	name: 'App',
-	components: {
-		Menu,
-    WhoWeAre,
-    Translate,
-    Excellence,
+    name: 'App',
+    components: {
+        AMenu,
+        WhoWeAre,
+        Translate,
+        Excellence
 
-	},
+    }
 });
 
 </script>
