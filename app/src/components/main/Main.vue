@@ -1,14 +1,12 @@
 <template>
-	<main class="main">
-
-    </main>
+    <main class="main" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-	name: 'Main',
+    name: 'TheMain'
 });
 </script>
 

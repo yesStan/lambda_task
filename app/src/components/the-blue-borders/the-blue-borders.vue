@@ -1,9 +1,9 @@
 <template>
-	<span class="blue-border">{{ text }}</span>
+    <span class="blue-border">{{ text }}</span>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue';
 
 export default defineComponent({
     name: 'TheBlueBorder',
@@ -13,7 +13,7 @@ export default defineComponent({
             default: ''
         }
     }
-})
+});
 </script>
 
 <style lang="scss" src="./the-blue-borders.scss" />
